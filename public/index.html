@@ -1,0 +1,35 @@
+<html lang="es">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAtnSc9DANI34EmxkHjQ-2RGmwewERoatY",
+      authDomain: "adreammexico-sandbox.firebaseapp.com",
+      databaseURL: "https://adreammexico-sandbox.firebaseio.com",
+      storageBucket: "adreammexico-sandbox.appspot.com",
+      messagingSenderId: "550795420848"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <script>
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+      
+    } else {
+      
+    }
+  </script>
+</body>
+
+</html>
