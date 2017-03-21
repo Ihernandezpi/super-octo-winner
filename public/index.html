@@ -1,35 +1,124 @@
 <html lang="es">
 
 <head>
-  <title></title>
+  <title>4aDream</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
-
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <link href="css/materialize.min.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.css" />
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyAtnSc9DANI34EmxkHjQ-2RGmwewERoatY",
-      authDomain: "adreammexico-sandbox.firebaseapp.com",
-      databaseURL: "https://adreammexico-sandbox.firebaseio.com",
-      storageBucket: "adreammexico-sandbox.appspot.com",
-      messagingSenderId: "550795420848"
-    };
-    firebase.initializeApp(config);
-  </script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
-  <script>
-    var user = firebase.auth().currentUser;
+  <div id="loader">
+    <div class="preloader-wrapper big active loader">
+      <div class="spinner-layer spinner-blue-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="loginPage" class="valign-wrapper">
+    <div class="container">
+      <div class="row valign">
+        <div class="col s0 m3 l3"></div>
+        <div class="col s12 m6 l6 center-align">
+          <img class="responsive-img" src="img/logo.png" alt="4aDream">
+          <a id="singinButton" class="waves-effect waves-light btn light-blue darken-4"><i class="material-icons left">perm_identity</i>Iniciar sesión</a>
+        </div>
+        <div class="col s0 m3 l3"></div>
+      </div>
+    </div>
+  </div>
+  <div id="panel" class="">
 
-    if (user) {
-      
-    } else {
-      
-    }
-  </script>
+    <ul id="user-info-nav" class="side-nav">
+      <li>
+        <div class="userView">
+          <div class="background">
+            <img src="img/baneruser.jpg">
+          </div>
+          <a href="#!user"><img class="circle" src=""></a>
+          <a href="#!name"><span class="white-text name"></span></a>
+          <a href="#!email"><span class="white-text email"></span></a>
+        </div>
+      </li>
+      <li><a href="#!singout"><i class="material-icons">input</i>Cerrar sesión</a></li>
+      <!--
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      -->
+    </ul>
+
+    <nav class="nav-extended indigo">
+      <div class="nav-wrapper">
+        <img data-activates="user-info-nav" class="brand-logo logobarra responsive-img" src="img/logo.png" alt="4aDream">
+        <a href="#" data-activates="user-info-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="mobile-demo" class="right button-collapse"><i class="material-icons">view_module</i></a>
+
+        <ul class="right hide-on-med-and-down">
+          <li> <a href="#home" class="buttonView" data-view="home"><i class="material-icons left">dashboard</i>Inicio</a> </li>
+          <li><a href="#products" class="buttonView" data-view="products"><i class="material-icons left">view_list</i>Productos</a></li>
+          <li><a href="#sales" class="buttonView" data-view="sales"><i class="material-icons left">store</i>Ventas</a></li>
+          <li><a href="#comingsoon" class="buttonView" data-view="comingsoon"><i class="material-icons left">info</i>Coming soon... </a></li>
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+          <li> <a href="#home" class="buttonView" data-view="home"><i class="material-icons left">dashboard</i>Inicio</a> </li>
+          <li><a href="#products" class="buttonView" data-view="products"><i class="material-icons left">view_list</i>Productos</a></li>
+          <li><a href="#sales" class="buttonView" data-view="sales"><i class="material-icons left">store</i>Ventas</a></li>
+          <li><a href="#comingsoon" class="buttonView" data-view="comingsoon"><i class="material-icons left">info</i>Coming soon... </a></li>
+        </ul>
+
+      </div>
+      <div class="nav-content">
+        <span class="nav-title"></span>
+        <a id="addButton" class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+          <i class="material-icons">add</i>
+        </a>
+      </div>
+    </nav>
+
+    <div id="home" class="view">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div id="products" class="view">
+      <div class="row">
+        <div class="tableside card col s12 m12 l9 ">
+        </div>
+        <div class="editside card col s12 m12 l3 ">
+        </div>
+      </div>
+    </div>
+
+    <div id="sales" class="view">
+      <div class="container">
+
+      </div>
+    </div>
+
+  </div>
+
 </body>
 
 </html>

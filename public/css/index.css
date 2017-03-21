@@ -1,0 +1,30 @@
+#loginPage {
+    height: 100%;
+    background: radial-gradient(circle, #ffffff, #ccd7e0);
+}
+
+#loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(192, 192, 192, 0.5);
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.logobarra {
+    width: 200px;
+}
+
+.background img {
+    width: 100%;
+    filter:brightness(70%);
+}

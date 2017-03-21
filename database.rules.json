@@ -1,6 +1,12 @@
 {
   "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
+    "products":{
+       	 ".read": "auth != false",
+         ".write": "root.child('admins/'+auth.uid).exists()"
+    },
+    "productsStructure":{
+       	 ".read": "auth != false",
+         ".write": "root.child('admins/'+auth.uid).exists()"
+    }
   }
 }
